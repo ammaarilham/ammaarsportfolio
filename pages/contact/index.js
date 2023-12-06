@@ -8,9 +8,10 @@ import React, { useRef, useState } from "react";
 
 import ParticlesContainer2 from "../../components/ParticlesContainer2.js";
 
+// ... (previous imports)
+
 const Contact = () => {
   const formRef = useRef();
-
   const [done, setDone] = useState(false);
 
   const handleSumbit = (e) => {
@@ -60,6 +61,7 @@ const Contact = () => {
             ref={formRef}
             action=""
             onSubmit={handleSumbit}
+            key="contact-form"
           >
             {/* input group */}
             <div className="flex gap-x-6 w-full">

@@ -72,12 +72,10 @@ const aboutData = [
         title: "Best reader of the year [schooling] ",
         stage: "2019 - 2020",
       },
-      ,
       {
         title: "Various awards for Public speeches [schooling]",
         stage: "2011 onwards",
       },
-      ,
       {
         title: "Basketball team player [schooling]",
         stage: "2017 - 2020",
@@ -99,12 +97,10 @@ const aboutData = [
         title: "Hospital management system",
         stage: "HTML CSS JS PHP MySQL",
       },
-      ,
       {
-        title: "Multiple Ardiuno projects [award winning]",
-        stage: "C++ ARDIUNO IDE",
+        title: "Multiple Arduino projects [award-winning]",
+        stage: "C++ ARDUINO IDE",
       },
-      ,
       {
         title: "Current portfolio site",
         stage: "HTML JS NextJS REACT TAILWIND ",
@@ -276,7 +272,11 @@ const About = () => {
                   <div className="flex gap-x-4 ">
                     {/* icons */}
                     {item.icons?.map((icon, itemIndex) => {
-                      return <div className="text-2xl text-white ">{icon}</div>;
+                      return (
+                        <div key={itemIndex} className="text-2xl text-white ">
+                          {icon}
+                        </div>
+                      );
                     })}
                   </div>
                 </div>
