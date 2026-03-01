@@ -1,7 +1,7 @@
 // WorkList.js
 import React from "react";
 import WorkItem from "./WorkItem";
-import { works } from "./worksData";
+import { works } from "../../data/worksData";
 import styles from "../../styles/WorkList.module.css";
 
 const WorkList = () => {

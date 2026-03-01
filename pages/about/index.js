@@ -176,7 +176,7 @@ const About = () => {
             >
               An aspiring software engineering workaholic who is dedicated to
               the work he does, currently following up my HND in Computer
-              science who's dream is to achieve a Full stack developer role!
+              science who&apos;s dream is to achieve a Full stack developer role!
             </motion.p>
             {/* counters */}
             <motion.div
@@ -255,33 +255,32 @@ const About = () => {
             })}
           </div>
           <div className=" py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start md:mb-2">
-            {aboutData[index].info.map((item, itemIndex) => {
-              return (
-                <div
-                  key={itemIndex}
-                  className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-white/60"
-                >
-                  {/* title */}
-                  <div className=" font-bold mb-2 md:mb-0">
-                    {" "}
-                    {"#" + " "}
-                    {item.title}
-                  </div>
-                  <div className="hidden md:flex">-</div>
-                  <div className="font-light">{item.stage}</div>
-                  <div className="flex gap-x-4 ">
-                    {/* icons */}
-                    {item.icons?.map((icon, itemIndex) => {
-                      return (
-                        <div key={itemIndex} className="text-2xl text-white ">
-                          {icon}
-                        </div>
-                      );
-                    })}
-                  </div>
-                </div>
-              );
-            })}
+{aboutData[index].info.map((item) => {
+  return (
+    <div
+      key={item.title} // ✅ use a unique string, not index
+      className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-white/60"
+    >
+      {/* title */}
+      <div className=" font-bold mb-2 md:mb-0">
+        {"#" + " "}{item.title}
+      </div>
+      <div className="hidden md:flex">-</div>
+      <div className="font-light">{item.stage}</div>
+
+      <div className="flex gap-x-4 ">
+        {/* icons */}
+        {item.icons?.map((icon, iconIndex) => {
+          return (
+            <div key={iconIndex} className="text-2xl text-white ">
+              {icon}
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+})}
           </div>
         </motion.div>
       </div>
